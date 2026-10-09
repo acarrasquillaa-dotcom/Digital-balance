@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productividad y concentración | MAPA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="../index.html" class="brand">
+        <span class="brand-icon">▣</span>
+        <span>MAPA Digital Balance</span>
+    </a>
+
+    <nav class="nav">
+        <a href="../index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="../library.html" data-es="Biblioteca" data-en="Library">Biblioteca</a>
+        <a href="../credits.html" data-es="Créditos" data-en="Credits">Créditos</a>
+    </nav>
+
+    <div class="language">
+        <button class="language-btn active" data-lang="es">ES</button>
+        <span>|</span>
+        <button class="language-btn" data-lang="en">EN</button>
+    </div>
+
+</header>
+
+
+<main class="chapter-page">
+
+    <section class="chapter-heading">
+
+        <div class="chapter-heading-top">
+
+            <span class="chapter-book"
+                  data-es="LIBRO 04"
+                  data-en="BOOK 04">
+                LIBRO 04
+            </span>
+
+            <span class="chapter-number"
+                  data-es="CAPÍTULO 2 DE 2"
+                  data-en="CHAPTER 2 OF 2">
+                CAPÍTULO 2 DE 2
+            </span>
+
+        </div>
+
+        <div class="chapter-progress">
+            <div class="chapter-progress-fill progress-full"></div>
+        </div>
+
+    </section>
+
+
+    <section class="chapter-hero book4-hero">
+
+        <div class="chapter-text">
+
+            <span class="tag"
+                  data-es="CONCENTRACIÓN Y GESTIÓN DEL TIEMPO"
+                  data-en="FOCUS & TIME MANAGEMENT">
+                CONCENTRACIÓN Y GESTIÓN DEL TIEMPO
+            </span>
+
+            <h1
+                data-es="Productividad y concentración"
+                data-en="Productivity and Focus">
+                Productividad y concentración
+            </h1>
+
+            <p
+                data-es="Concentrarte mejor no significa trabajar sin descanso. Organizar periodos de atención y pausas puede ayudarte a gestionar tu tiempo de manera más realista."
+                data-en="Focusing better does not mean working without breaks. Organizing periods of attention and rest can help you manage your time more realistically.">
+                Concentrarte mejor no significa trabajar sin descanso.
+                Organizar periodos de atención y pausas puede ayudarte a
+                gestionar tu tiempo de manera más realista.
+            </p>
+
+        </div>
+
+
+        <div class="chapter-illustration">
+
+            <img
+                src="../assets/images/Capitulo 4-2.png"
+                alt="Productividad y concentración"
+                class="chapter-main-image">
+
+        </div>
+
+    </section>
+
+
+    <section class="focus-tools">
+
+        <div class="pomodoro-card">
+
+            <span class="tag">FOCUS TIMER</span>
+
+            <h2
+                data-es="Temporizador de concentración"
+                data-en="Focus timer">
+                Temporizador de concentración
+            </h2>
+
+            <p
+                data-es="Prueba una demostración corta de la técnica Pomodoro."
+                data-en="Try a short demonstration of the Pomodoro technique.">
+                Prueba una demostración corta de la técnica Pomodoro.
+            </p>
+
+
+            <div class="timer-display" id="timerDisplay">
+                00:25
+            </div>
+
+
+            <div class="timer-buttons">
+
+                <button id="startTimer"
+                        data-es="Iniciar"
+                        data-en="Start">
+                    Iniciar
+                </button>
+
+                <button id="resetTimer"
+                        data-es="Reiniciar"
+                        data-en="Reset">
+                    Reiniciar
+                </button>
+
+            </div>
+
+            <small
+                data-es="Demostración de 25 segundos para fines interactivos."
+                data-en="25-second demonstration for interactive purposes.">
+                Demostración de 25 segundos para fines interactivos.
+            </small>
+
+        </div>
+
+
+        <div class="planner-card">
+
+            <span class="tag"
+                  data-es="PLAN DE ESTUDIO"
+                  data-en="STUDY PLAN">
+                PLAN DE ESTUDIO
+            </span>
+
+            <h2
+                data-es="Organiza tu próxima sesión"
+                data-en="Organize your next session">
+                Organiza tu próxima sesión
+            </h2>
+
+
+            <label>
+                <span
+                    data-es="¿Qué vas a estudiar?"
+                    data-en="What will you study?">
+                    ¿Qué vas a estudiar?
+                </span>
+
+                <input
+                    type="text"
+                    id="studyTask"
+                    placeholder="Ej. Física">
+            </label>
+
+
+            <label>
+                <span
+                    data-es="¿Cuántos bloques?"
+                    data-en="How many blocks?">
+                    ¿Cuántos bloques?
+                </span>
+
+                <select id="studyBlocks">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </label>
+
+
+            <button class="planner-button"
+                    id="createPlan"
+                    data-es="Crear plan"
+                    data-en="Create plan">
+                Crear plan
+            </button>
+
+
+            <div class="planner-result" id="plannerResult">
+
+                <p
+                    data-es="Tu plan aparecerá aquí."
+                    data-en="Your plan will appear here.">
+                    Tu plan aparecerá aquí.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="chapter-tip">
+
+        <strong
+            data-es="Consejo"
+            data-en="Tip">
+            Consejo
+        </strong>
+
+        <p
+            data-es="Antes de comenzar una sesión, define una tarea concreta y elimina las interrupciones que puedas controlar."
+            data-en="Before starting a session, define one clear task and remove the interruptions you can control.">
+            Antes de comenzar una sesión, define una tarea concreta
+            y elimina las interrupciones que puedas controlar.
+        </p>
+
+    </section>
+
+
+    <section class="chapter-navigation">
+
+        <a href="module4-1.html"
+           class="secondary-button"
+           data-es="← Capítulo anterior"
+           data-en="← Previous chapter">
+            ← Capítulo anterior
+        </a>
+
+        <a href="../library.html"
+           class="primary-button"
+           data-es="Volver a la biblioteca →"
+           data-en="Back to library →">
+            Volver a la biblioteca →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <p>MAPA Digital Balance · Book 04</p>
+
+    <p data-es="Libro completado"
+       data-en="Book completed">
+        Libro completado
+    </p>
+</footer>
+
+
+<script src="../js/app.js"></script>
+
+<script>
+
+let seconds = 25;
+let timer = null;
+
+const timerDisplay =
+    document.getElementById("timerDisplay");
+
+const startTimer =
+    document.getElementById("startTimer");
+
+const resetTimer =
+    document.getElementById("resetTimer");
+
+
+function updateTimer() {
+
+    const formatted =
+        String(seconds).padStart(2, "0");
+
+    timerDisplay.textContent =
+        `00:${formatted}`;
+
+}
+
+
+startTimer.addEventListener("click", () => {
+
+    if (timer !== null) return;
+
+    timer = setInterval(() => {
+
+        seconds--;
+
+        updateTimer();
+
+        if (seconds <= 0) {
+
+            clearInterval(timer);
+            timer = null;
+
+            const language =
+                localStorage.getItem("mapaLanguage") || "es";
+
+            timerDisplay.textContent =
+                language === "es"
+                    ? "¡Pausa!"
+                    : "Break!";
+
+        }
+
+    }, 1000);
+
+});
+
+
+resetTimer.addEventListener("click", () => {
+
+    clearInterval(timer);
+    timer = null;
+
+    seconds = 25;
+
+    updateTimer();
+
+});
+
+
+const createPlan =
+    document.getElementById("createPlan");
+
+const plannerResult =
+    document.getElementById("plannerResult");
+
+
+createPlan.addEventListener("click", () => {
+
+    const task =
+        document.getElementById("studyTask").value.trim();
+
+    const blocks =
+        document.getElementById("studyBlocks").value;
+
+    const language =
+        localStorage.getItem("mapaLanguage") || "es";
+
+    if (!task) {
+
+        plannerResult.innerHTML =
+            language === "es"
+                ? "<p>Escribe primero una tarea.</p>"
+                : "<p>Enter a task first.</p>";
+
+        return;
+
+    }
+
+    if (language === "es") {
+
+        plannerResult.innerHTML = `
+            <strong>${task}</strong>
+            <p>${blocks} bloque(s) de concentración + pausas breves.</p>
+        `;
+
+    } else {
+
+        plannerResult.innerHTML = `
+            <strong>${task}</strong>
+            <p>${blocks} focus block(s) + short breaks.</p>
+        `;
+
+    }
+
+});
+
+updateTimer();
+
+</script>
+
+</body>
+</html>
