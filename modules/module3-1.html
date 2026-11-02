@@ -234,38 +234,117 @@
             </span>
 
             <h2
-                data-es="Haz clic en cada zona"
-                data-en="Click each body area">
-                Haz clic en cada zona
+                data-es="Compara y revisa tu postura"
+                data-en="Compare and check your posture">
+                Compara y revisa tu postura
             </h2>
+
+            <p
+                data-es="Observa la diferencia entre una postura adecuada y una postura que conviene evitar. Después, selecciona cada zona del cuerpo para consultar una recomendación."
+                data-en="Notice the difference between a good posture and a posture to avoid. Then select each body area to see a recommendation.">
+                Observa la diferencia entre una postura adecuada y una postura que
+                conviene evitar. Después, selecciona cada zona del cuerpo para
+                consultar una recomendación.
+            </p>
 
         </div>
 
+        <div class="posture-comparison">
+
+            <div class="posture-example correct-posture">
+
+                <div class="posture-status">✓</div>
+
+                <div class="posture-visual correct-visual">
+                    <div class="posture-head"></div>
+                    <div class="posture-body"></div>
+                    <div class="posture-arm"></div>
+                    <div class="posture-leg"></div>
+                </div>
+
+                <div class="posture-text">
+
+                    <h3
+                        data-es="Postura adecuada"
+                        data-en="Good posture">
+                        Postura adecuada
+                    </h3>
+
+                    <p
+                        data-es="Espalda apoyada, cabeza alineada, hombros relajados y pies con apoyo estable."
+                        data-en="Back supported, head aligned, shoulders relaxed, and feet firmly supported.">
+                        Espalda apoyada, cabeza alineada, hombros relajados y pies con apoyo estable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="posture-example incorrect-posture">
+
+                <div class="posture-status">✕</div>
+
+                <div class="posture-visual incorrect-visual">
+                    <div class="posture-head"></div>
+                    <div class="posture-body"></div>
+                    <div class="posture-arm"></div>
+                    <div class="posture-leg"></div>
+                </div>
+
+                <div class="posture-text">
+
+                    <h3
+                        data-es="Postura a evitar"
+                        data-en="Posture to avoid">
+                        Postura a evitar
+                    </h3>
+
+                    <p
+                        data-es="Cuello inclinado, espalda encorvada y falta de apoyo pueden generar incomodidad durante periodos prolongados."
+                        data-en="A bent neck, hunched back, and lack of support may cause discomfort during prolonged periods.">
+                        Cuello inclinado, espalda encorvada y falta de apoyo pueden
+                        generar incomodidad durante periodos prolongados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <div class="body-check-grid">
 
             <button class="body-point"
+                    data-title-es="Cabeza"
+                    data-title-en="Head"
                     data-message-es="Mantén la cabeza alineada y evita inclinarla demasiado hacia adelante."
                     data-message-en="Keep your head aligned and avoid leaning it too far forward.">
-                Cabeza
+                <span data-es="Cabeza" data-en="Head">Cabeza</span>
             </button>
 
             <button class="body-point"
+                    data-title-es="Hombros"
+                    data-title-en="Shoulders"
                     data-message-es="Mantén los hombros relajados y evita encogerlos mientras trabajas."
                     data-message-en="Keep your shoulders relaxed and avoid shrugging while working.">
-                Hombros
+                <span data-es="Hombros" data-en="Shoulders">Hombros</span>
             </button>
 
             <button class="body-point"
+                    data-title-es="Espalda"
+                    data-title-en="Back"
                     data-message-es="Apoya la espalda y evita permanecer encorvado durante largos periodos."
                     data-message-en="Support your back and avoid staying hunched over for long periods.">
-                Espalda
+                <span data-es="Espalda" data-en="Back">Espalda</span>
             </button>
 
             <button class="body-point"
+                    data-title-es="Pies"
+                    data-title-en="Feet"
                     data-message-es="Procura mantener los pies apoyados de manera estable."
                     data-message-en="Try to keep your feet supported in a stable position.">
-                Pies
+                <span data-es="Pies" data-en="Feet">Pies</span>
             </button>
 
         </div>
@@ -312,27 +391,37 @@
 
 
 <footer class="footer">
+
     <p>MAPA Digital Balance · Book 03</p>
 
-    <p data-es="Capítulo 1 de 2"
-       data-en="Chapter 1 of 2">
+    <p
+        data-es="Capítulo 1 de 2"
+        data-en="Chapter 1 of 2">
         Capítulo 1 de 2
     </p>
+
 </footer>
 
 
 <script src="../js/app.js"></script>
 
+
 <script>
 
-const healthTabs = document.querySelectorAll(".health-tab");
-const healthContents = document.querySelectorAll(".health-content");
+
+const healthTabs =
+    document.querySelectorAll(".health-tab");
+
+const healthContents =
+    document.querySelectorAll(".health-content");
+
 
 healthTabs.forEach(tab => {
 
     tab.addEventListener("click", () => {
 
-        const target = tab.dataset.target;
+        const target =
+            tab.dataset.target;
 
         healthTabs.forEach(item =>
             item.classList.remove("active")
@@ -353,8 +442,12 @@ healthTabs.forEach(tab => {
 });
 
 
-const bodyPoints = document.querySelectorAll(".body-point");
-const bodyFeedback = document.getElementById("bodyFeedback");
+const bodyPoints =
+    document.querySelectorAll(".body-point");
+
+const bodyFeedback =
+    document.getElementById("bodyFeedback");
+
 
 bodyPoints.forEach(point => {
 
@@ -369,13 +462,20 @@ bodyPoints.forEach(point => {
 
         point.classList.add("selected");
 
+        const title =
+            language === "es"
+                ? point.dataset.titleEs
+                : point.dataset.titleEn;
+
         const message =
             language === "es"
                 ? point.dataset.messageEs
                 : point.dataset.messageEn;
 
-        bodyFeedback.innerHTML =
-            `<strong>${point.textContent.trim()}</strong><p>${message}</p>`;
+        bodyFeedback.innerHTML = `
+            <strong>${title}</strong>
+            <p>${message}</p>
+        `;
 
     });
 
